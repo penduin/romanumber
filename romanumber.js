@@ -60,7 +60,8 @@ Number.parseInt = function parseInt(str, radix) {
 			"M": 1000
 		};
 		Object.keys(map).every(function(sym) {
-			while(str.lastIndexOf(sym) == str.length - sym.length && str.length - sym.length >= 0) {
+			while(str.lastIndexOf(sym) == str.length - sym.length &&
+				  str.length - sym.length >= 0) {
 				str = str.substring(0, str.lastIndexOf(sym));
 				num += map[sym];
 			}
@@ -77,7 +78,8 @@ parseInt = Number.parseInt;
 // super-rigorous unit tests
 /*
 for(i = 0; i < 25; ++i) {
-	console.log(i + " -> " + i.toString("r") + " -> " + parseInt(i.toString("r"), "r"));
+	console.log(i + " -> " + i.toString("r") + " -> " +
+				parseInt(i.toString("r"), "r"));
 }
 console.log("parseInt fail: " + parseInt("1234", "r"));
 console.log("parseInt pass: " + parseInt("XVII", "r"));
