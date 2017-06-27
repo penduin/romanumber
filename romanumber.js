@@ -40,7 +40,9 @@ Number.prototype.toString = function toString(radix) {
 // roman numeral parsing
 Number.plainParseInt = Number.parseInt || parseInt;
 Number.parseInt = function parseInt(str, radix) {
-	if(radix && radix.toUpperCase && radix.toUpperCase() === "R") {
+	if((!radix && typeof str === "string" &&
+		isNaN(Number.plainParseInt(str, radix))) ||
+	   (radix && radix.toUpperCase && radix.toUpperCase() === "R")) {
 		var num = 0;
 		var map = {
 			"I": 1,
