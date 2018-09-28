@@ -1,17 +1,6 @@
-# romanumber
-javascript polyfill to parse/stringify roman numerals
-
-
-this super-useful polyfill lets you do incredibly relevant and meaningful
-things with numbers in javascript, like this:
-
-  var num = 5;
-  console.log(num.toString("r")); // logs "V"
-
-  console.log(parseInt("IX"));    // logs 9
-
-
-just as you've always dreamed, you can now use a radix of "r" or "R" to
-parse and stringify roman numerals.  parseInt even auto-detects.
-
-you're welcome, humanity!
+this project now lives here:
+  https://gitlab.com/penduin/romanumber  
+  
+my projects will no longer be active on github.  
+(the bits feel safer far away from microsoft and nat)  
+many thanks to the pre-acquisition github staff! 
